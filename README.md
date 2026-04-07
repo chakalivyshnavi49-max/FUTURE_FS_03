@@ -1,11 +1,16 @@
-# FUTURE_FS_03 - Local Business Website
+# ☕ Sunrise Cafe Website
 
-This is a simple website for a local business (Sunrise Cafe).
+A modern cafe website built using HTML, CSS, and JavaScript.
 
 ## Features
-- Business information
-- Services section
-- Contact details
+- Responsive design
+- Animated sections
+- Scroll-based navigation
+- Dark mode toggle
+- Interactive UI
 
-## How to run
-Open index.html in browser.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
