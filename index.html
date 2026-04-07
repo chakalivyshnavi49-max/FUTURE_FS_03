@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sunrise Cafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>Sunrise Cafe</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle">🌙</button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="overlay">
+    <h1>Sunrise Cafe</h1>
+    <p>Fresh Coffee. Cozy Vibes. Delicious Food.</p>
+    <a href="#contact" class="btn">Visit Us</a>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>At Sunrise Cafe, we believe in serving happiness with every cup.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>☕ Coffee</h3>
+      <p>Premium freshly brewed coffee.</p>
+    </div>
+    <div class="card">
+      <h3>🥐 Breakfast</h3>
+      <p>Healthy and delicious meals.</p>
+    </div>
+    <div class="card">
+      <h3>📶 Free WiFi</h3>
+      <p>Fast internet access.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-items">
+    <div class="menu-card">
+      <h3>Espresso</h3>
+      <p>Strong and bold coffee</p>
+      <span>₹120</span>
+    </div>
+    <div class="menu-card">
+      <h3>Cappuccino</h3>
+      <p>Rich and creamy</p>
+      <span>₹180</span>
+    </div>
+    <div class="menu-card">
+      <h3>Sandwich</h3>
+      <p>Fresh and tasty</p>
+      <span>₹150</span>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>Our Cafe</h2>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" />
+    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" />
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What Customers Say</h2>
+  <div class="test-cards">
+    <div class="test-card">
+      <p>"Best coffee in town!"</p>
+      <h4>- Deepika</h4>
+    </div>
+    <div class="test-card">
+      <p>"Amazing vibe and service."</p>
+      <h4>- Rahul</h4>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: cafe@example.com</p>
+  <p>Phone: 9876543210</p>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-form">
+  <h2>Send Us a Message</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- SHOWCASE -->
+<section class="cafe-showcase">
+  <div class="showcase-text">
+    <h2>Experience Our Cafe</h2>
+    <p>Enjoy cozy atmosphere and perfect coffee moments.</p>
+  </div>
+  <div class="showcase-images">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Sunrise Cafe | All Rights Reserved</p>
+</footer>
+
+<!-- JS -->
+<script>
+// Scroll Spy
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === "#" + current) {
+      a.classList.add("active");
+    }
+  });
+});
+
+// Dark Mode
+document.getElementById("darkToggle").onclick = () => {
+  document.body.classList.toggle("dark");
+};
+
+// Card Animation
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.8;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < trigger) {
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+</script>
+
+</body>
+</html>

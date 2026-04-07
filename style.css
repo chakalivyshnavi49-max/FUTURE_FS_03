@@ -1,0 +1,290 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c2c2c;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(62, 39, 35, 0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  gap: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc80;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #ffcc80;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #3e2723, #6d4c41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff8e1;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+}
+
+.overlay p {
+  font-size: 1.3rem;
+}
+
+/* BUTTON */
+.btn {
+  background: #ffcc80;
+  color: #3e2723;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffb74d;
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  scroll-margin-top: 80px;
+}
+
+/* ABOUT */
+.about {
+  background: #efebe9;
+}
+
+/* SERVICES */
+.services {
+  background: #fff;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #d7ccc8;
+  padding: 25px;
+  border-radius: 15px;
+  width: 220px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #bcaaa4;
+}
+
+/* MENU */
+.menu {
+  background: #fff3e0;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  background: #ffe0b2;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 250px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #efebe9;
+}
+
+.test-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.test-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* CONTACT */
+.contact {
+  background: #efebe9;
+}
+
+/* CONTACT FORM */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: #3e2723;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #5d4037;
+}
+
+/* STATS */
+.stats {
+  background: #ffe0b2;
+}
+
+.stats-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stats h3 {
+  font-size: 2rem;
+}
+
+/* SHOWCASE */
+.cafe-showcase {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 20px;
+  background: #fff8e1;
+  flex-wrap: wrap;
+}
+
+.showcase-text {
+  max-width: 400px;
+}
+
+.showcase-images {
+  display: flex;
+  gap: 20px;
+}
+
+.showcase-images img {
+  width: 250px;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.showcase-images img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* FOOTER */
+footer {
+  background: #3e2723;
+  color: #fff8e1;
+  padding: 20px;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark section {
+  background: #1e1e1e;
+}
+
+.dark .navbar {
+  background: #1e1e1e;
+}
+
+.dark .card,
+.dark .menu-card,
+.dark .test-card {
+  background: #2c2c2c;
+  color: white;
+}
